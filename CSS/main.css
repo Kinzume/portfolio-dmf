@@ -1,0 +1,469 @@
+/*Notes*/
+/*Using flexbox for single columns/rows
+Using grid for multiple columns/rows
+Style headings last*/
+
+/*Global Styles*/
+/*root and body*/
+:root {
+  --white: #ffffff;
+  --green: #b1f495;
+  --blue: #00afef;
+  --dark-blue: #000ec4;
+  --background: #001327;
+}
+body {
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+}
+/*============================================*/
+/*Typography*/
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h1,
+h2 {
+  font-family: Roboto;
+}
+h3 {
+  font-family: Roboto Slab;
+  font-size: 1.75em;
+}
+header a,
+p {
+  font-family: Chakra Petch;
+  color: var(--white);
+  width: clamp(45ch, 50%, 75ch);
+  font-size: 1em;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Chakra Petch;
+  color: var(--blue);
+}
+button {
+  border-radius: 0.25rem;
+  border: 0.15em solid var(--green);
+  padding: 1rem 3rem;
+  background-color: var(--background);
+  color: var(--green);
+  font-family: Chakra Petch;
+  font-size: 1em;
+  cursor: pointer;
+}
+button:hover {
+  transition: ease-out 0.5s;
+  box-shadow: inset 0 0 2rem 0 var(--blue);
+}
+/*============================================*/
+/*==================================================================================================*/
+/*Margin, Padding, Subheaders*/
+#workstitle,
+#abouttitle,
+#portfoliotitle,
+#contacttitle,
+#hero,
+#works,
+#about,
+.aboutlang,
+.portfoliocontainer,
+#contact,
+#contact2,
+footer {
+  margin: 0 auto;
+}
+#hero,
+#works,
+#about,
+.aboutlang,
+.portfoliocontainer,
+#contact,
+#contact2,
+footer {
+  width: 75%;
+}
+#workstitle,
+#abouttitle,
+#portfoliotitle,
+#contacttitle {
+  color: #ffffff;
+  font-family: Roboto Slab;
+  text-align: center;
+  text-decoration: underline var(--green) 0.25rem;
+}
+#workstitle {
+  padding: 0 0 10rem 0;
+}
+#abouttitle,
+#portfoliotitle,
+#contacttitle {
+  padding: 0 0 5rem 0;
+}
+.spacing {
+  padding: 10rem 0 1.5rem 0;
+}
+/*==================================================================================================*/
+/*Sections*/
+
+/*header (nav and logo)*/
+header {
+  width: 100%;
+  height: 1px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header div {
+  width: 5%;
+}
+header div img {
+  width: 100%;
+  margin: 1rem;
+}
+header a {
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+header a:hover {
+  transition: ease-out 0.25s;
+  color: var(--blue);
+}
+nav > ul {
+  margin: 1rem 1rem 0 0;
+}
+/*============================================*/
+/*hero*/
+#hero {
+  padding: 20rem 0 10rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.herol {
+  width: 33%;
+}
+.heror {
+  width: 17%;
+}
+#hero img {
+  width: 100%;
+}
+#hero h2 {
+  color: var(--blue);
+}
+#hero h3 {
+  color: var(--white);
+}
+/*============================================*/
+/*Works*/
+#works {
+  display: flex;
+  flex-direction: column;
+}
+.workspalette {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#works img {
+  width: 100%;
+}
+.worksl {
+  width: 33%;
+}
+.worksmid {
+  width: 0.25%;
+  height: 15rem;
+  background-color: var(--green);
+}
+.worksr {
+  width: 33%;
+}
+.worksr a:hover {
+  transition: ease-out 0.25s;
+  color: var(--green);
+}
+/*============================================*/
+/*About*/
+#about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#about h3 {
+  color: var(--white);
+}
+.aboutl {
+  width: 22%;
+  padding: 0 2rem;
+}
+.aboutl img {
+  width: 100%;
+}
+.aboutr {
+  width: 33%;
+  padding: 0 2rem;
+}
+.aboutlang {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 10rem 0;
+}
+.aboutlang ul {
+  width: 33%;
+  padding: 0 2rem;
+  color: var(--white);
+  font-family: Roboto Slab;
+  line-height: 2.5em;
+  font-weight: 400;
+}
+.aboutlang p {
+  width: 60%;
+  padding: 0 2rem;
+}
+.arrowl {
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+  border-left: 0.5rem solid var(--green);
+  border-bottom: 0.5rem solid var(--green);
+  position: relative;
+  transform: rotate(45deg);
+}
+.arrowr {
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+  border-left: 0.5rem solid var(--green);
+  border-bottom: 0.5rem solid var(--green);
+  position: relative;
+  transform: rotate(-135deg);
+}
+.aboutlangl {
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutlangr {
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutmid {
+  width: 0.25%;
+  height: 15rem;
+  background-color: var(--green);
+}
+/*============================================*/
+/*Portfolio*/
+.portfoliopalette {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfoliocontainer {
+  padding: 5rem 0 5rem 0;
+}
+.portfoliol {
+  width: 33%;
+}
+.portfoliol img {
+  width: 100%;
+}
+.portfoliomid {
+  width: 0.25%;
+  height: 15rem;
+  background-color: var(--green);
+}
+.portfolior {
+  width: 33%;
+}
+.portfolior a:hover {
+  transition: ease-out 0.25s;
+  color: var(--green);
+}
+.portfoliocontainer h3 {
+  margin: 1rem 0;
+  width: 8%;
+  word-wrap: normal;
+  color: var(--white);
+  text-decoration: underline var(--green) 0.15rem;
+  font-weight: lighter;
+  font-size: 1em;
+}
+/*============================================*/
+/*Contact*/
+#contact2title {
+  color: var(--green);
+  font-weight: 100;
+  text-align: center;
+  margin: 0;
+}
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 10rem 0;
+}
+#github {
+  margin: 0 2rem;
+}
+#linkedin {
+  margin: 0 0.25rem 0 2rem;
+}
+#twitter {
+  margin: 0 2rem;
+}
+#contact img {
+  width: 100%;
+}
+#contact2button {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#contact2 button {
+  padding: 1rem 5rem;
+}
+input[type="text"] {
+  padding: 1rem;
+  border: none;
+  font-family: Chakra Petch;
+}
+#nameandemail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#name,
+#email {
+  width: 47%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+#subject,
+#message {
+  padding: 1rem;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  box-sizing: border-box;
+}
+/*============================================*/
+/*Footer*/
+hr {
+  width: 90%;
+  height: 5px;
+  background-color: var(--green);
+  border: none;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.25, 0.25);
+}
+#githubf {
+  margin: 0 1rem;
+}
+#linkedinf {
+  margin: 0 0.125rem 0 1.5rem;
+}
+#twitterf {
+  margin: 0 1rem;
+}
+#githubf img,
+#linkedinf img,
+#twitterf img {
+  width: 100%;
+}
+/*============================================*/
+/*==================================================================================================*/
+/*Mobile - S20 Ultra (WIP)*/
+@media (max-width: 415px) {
+  /*Changing containers' width to 100%*/
+  #hero,
+  #works,
+  #about,
+  .aboutlang,
+  .portfoliocontainer,
+  #contact,
+  #contact2,
+  footer {
+    width: 100%;
+  }
+  /*============================================*/
+  /*Hiding content*/
+  header {
+    display: none;
+  }
+  p {
+    display: none;
+  }
+  .aboutlang {
+    display: none;
+  }
+  .worksmid,
+  .portfoliomid {
+    display: none;
+  }
+  /*============================================*/
+  /*Sections*/
+  #hero {
+    justify-content: space-around;
+  }
+  .herol h2 {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .herol h3 {
+    font-size: 1em;
+  }
+  .heror {
+    width: 40%;
+  }
+  button {
+    padding: 0.5rem;
+  }
+  .worksr {
+    width: 20%;
+  }
+  .workspalette,
+  .portfoliopalette {
+    display: flex;
+    justify-content: space-around;
+  }
+  .portfoliocontainer {
+    text-align: center;
+  }
+  .portfoliocontainer h3 {
+    width: 30%;
+    margin: 0 auto;
+    line-height: 3rem;
+  }
+  /*============================================*/
+}
+/*==================================================================================================*/
